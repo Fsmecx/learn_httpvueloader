@@ -1,18 +1,23 @@
 <template>
-  <div>
-    <h1>Canvas</h1>
-    <pixel-component/>
+  <div class="card">
+    <div class="card-header">{{title}} Header</div>
+    <div class="card-body">
+      <h2>{{title}} body</h2>
+      <pixel-component :parent="title">hello</pixel-component>
+    </div>
+    <div class="card-footer">{{title}} footer</div>
   </div>
 </template>
-
 <script>
 module.exports = {
-  name: "canvas-component",
-  compoents: {
-    "pixel-component": httpVueLoader("components/pixel-component.vue")
+  data: function() {
+    return {
+      title: "Canvas"
+    };
+  },
+  components: {
+    "pixel-component": httpVueLoader("./pixel-component.vue")
   }
 };
 </script>
 
-<style>
-</style>

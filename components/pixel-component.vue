@@ -1,11 +1,17 @@
 <template>
-  <div>this is pixel</div>
+  <div class="card">
+    <div class="card-body">
+      <h2>this is pixel</h2>
+      <h3>I'm inside {{parent}}</h3>
+      <slot></slot>
+    </div>
+  </div>
 </template>
 <script>
 module.exports = {
-  name: "pixel-component"
+  props: {
+    parent: String
+  }
 };
 </script>
 
-<style>
-</style>
