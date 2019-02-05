@@ -8,10 +8,13 @@
         <canvas-component></canvas-component>
       </div>
       <div class="card-footer">App.Vue Footer</div>
+      <!-- <login-component/> -->
     </div>
   </div>
 </template>
 <script>
+var canvasComponent = httpVueLoader("./components/canvas-component.vue");
+var loginComponent = httpVueLoader("./components/login-component.vue");
 module.exports = {
   data: function() {
     return {
@@ -19,7 +22,8 @@ module.exports = {
     };
   },
   components: {
-    "canvas-component": httpVueLoader("./canvas-component.vue")
+    "canvas-component": canvasComponent,
+    "login-component": loginComponent
   }
 };
 </script>

@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+var x = require("./pixel-component.vue");
 module.exports = {
   data: function() {
     return {
