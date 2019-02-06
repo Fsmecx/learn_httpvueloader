@@ -87,11 +87,11 @@ module.exports = {
           this.OnHttpGetSuccess(resp);
         })
         .catch(function(error) {
-          // handle error
-          console.log(error);
+          this.OnHttpGetFail(error);
         })
         .then(function() {
           // always executed
+          console.log("completed");
         });
     },
     OnHttpGetSuccess: function(resp) {
@@ -102,6 +102,9 @@ module.exports = {
       console.log(data);
       this.message = data.answer;
       this.ShowSpinner = false;
+    },
+    OnHttpGetFail: function(resp) {
+      console.log(resp);
     }
   }
 };
