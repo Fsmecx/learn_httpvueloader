@@ -1,23 +1,14 @@
 <template>
-  <div>
-    <div>
-      <p>
-        <!-- use router-link component for navigation. -->
-        <!-- specify the link by passing the `to` prop. -->
-        <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
-        <router-link to="/login">Login</router-link>
-        <router-link to="/foo">Go to Foo</router-link>
-        <router-link to="/GetAllValues">Go to GetAllValues</router-link>
-      </p>
-    </div>
-    <router-view></router-view>
-    <googleyoutube-component></googleyoutube-component>
-  </div>
+  <v-app>
+    <v-content transition="slide-x-transition">
+      <router-view></router-view>
+    </v-content>
+  </v-app>
 </template>
 <script>
 var canvasComponent = httpVueLoader("./components/canvas-component.vue");
 var loginComponent = httpVueLoader("./components/login-component.vue");
-
+var appNav = httpVueLoader("./components/AppNavigation.vue");
 module.exports = {
   props: {},
   data: function() {
@@ -25,9 +16,8 @@ module.exports = {
       test: "app.vue test"
     };
   },
-
   components: {
-    "canvas-component": canvasComponent,
+    "app-navigation": appNav,
     "login-component": loginComponent,
     "getall-component": httpVueLoader("./components/getall.vue"),
     "vuetify-test": httpVueLoader("./components/vuetifytest.vue"),

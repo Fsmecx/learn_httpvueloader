@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card w-100px">
     <div class="card-header">{{title}} Header</div>
     <div class="card-body">
       <h2>{{title}} body</h2>
