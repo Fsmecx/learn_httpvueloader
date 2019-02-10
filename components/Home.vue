@@ -7,11 +7,12 @@
 </template>
 
 <script>
+import * as x from "./HomeDetails.vue";
 module.exports = {
   name: "home",
   components: {
     HomeHero: httpVueLoader("./HomeHero.vue"),
-    HomeDetails: httpVueLoader("./HomeDetails.vue"),
+    HomeDetails: x, //httpVueLoader("./HomeDetails.vue"),
     HomePlans: httpVueLoader("./HomePlans.vue")
   }
 };

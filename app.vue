@@ -1,28 +1,23 @@
-<template>
+<template >
   <v-app>
-    <v-content transition="slide-x-transition">
+    <menu-component></menu-component>
+    <v-toolbar app>
+      <v-toolbar-title>Category 1B</v-toolbar-title>
+    </v-toolbar>
+    <v-content>
       <router-view></router-view>
     </v-content>
+    <v-footer>hello</v-footer>
   </v-app>
-</template>
-<script>
-var canvasComponent = httpVueLoader("./components/canvas-component.vue");
-var loginComponent = httpVueLoader("./components/login-component.vue");
-var appNav = httpVueLoader("./components/AppNavigation.vue");
+</template> 
+<script >
 module.exports = {
   props: {},
   data: function() {
-    return {
-      test: "app.vue test"
-    };
+    return {};
   },
   components: {
-    "app-navigation": appNav,
-    "login-component": loginComponent,
-    "getall-component": httpVueLoader("./components/getall.vue"),
-    "vuetify-test": httpVueLoader("./components/vuetifytest.vue"),
-    "rating-component": httpVueLoader("./components/rating.vue"),
-    "googleyoutube-component": httpVueLoader("./components/googleyoutube.vue")
+    "menu-component": httpVueLoader("./components/menu.vue")
   }
 };
 </script>
