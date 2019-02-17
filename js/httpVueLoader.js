@@ -372,7 +372,7 @@
 		return url;
 	}
 
-
+	console.log('in httpVueLoader')
 	httpVueLoader.load = function (url, name) {
 
 		return function () {
@@ -473,10 +473,10 @@
 	httpVueLoader.scriptExportsHandler = identity;
 
 	function httpVueLoader(url, name) {
-
+		console.log("name " + name)
 		var comp = parseComponentURL(url);
 		return httpVueLoader.load(comp.url, name);
-	}
+	};
 
 	return httpVueLoader;
 });

@@ -2,7 +2,7 @@
   <v-app>
     <menu-component></menu-component>
     <v-toolbar app>
-      <v-toolbar-title>Category 1B</v-toolbar-title>
+      <v-toolbar-title>Category 1B!!</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <router-view></router-view>
